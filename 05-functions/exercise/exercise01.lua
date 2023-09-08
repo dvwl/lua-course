@@ -1,0 +1,4 @@
+-- Write a function that takes an arbitrary number of values and returns all of them, except the first one and:-
+-- a) the maximum value among the arguments, 
+-- b) the minimum value among the arguments, 
+-- c) the sum of all arguments.
