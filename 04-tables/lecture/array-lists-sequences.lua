@@ -1,5 +1,5 @@
 --[[ Arrays, Lists, and Sequences ]]
-To represent a conventional array or a list, we simply use a table with integer keys. There is neither a way nor a need to declare a size; we just initialize the elements we need:
+-- To represent a conventional array or a list, we simply use a table with integer keys. There is neither a way nor a need to declare a size; we just initialize the elements we need: 
 -- read 10 lines, storing them in a table
 a = {}
 for i = 1, 10 do
