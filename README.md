@@ -30,7 +30,15 @@ git clone https://github.com/dvwl/lua-course.git
 ```
 
 ## Getting Started
-To get started with the course, navigate to the Getting Started folder, where you'll find instructions on setting up your development environment and running your first Lua program.
+In order to kickstart your journey into Lua programming for this course, follow these simple steps:
+
+1. **Obtain LuaBinaries**: We will be using the stand-alone Lua interpreter, LuaBinaries, to execute Lua code. You can download it from the following link: [LuaBinaries Download](https://luabinaries.sourceforge.net/).
+
+2. **Configure Your Environment Path**: After downloading LuaBinaries, configure your system's environment path to include the directory where LuaBinaries is located. This step is crucial for seamless execution of Lua code throughout the course.
+
+3. **Navigate to the Getting Started Folder**: Once you have LuaBinaries set up, navigate to the "Getting Started" folder to begin your Lua programming journey.
+
+Now, you're all set to dive into the world of Lua programming and embark on an exciting learning adventure!
 
 ## Contributions and Issues
 Contributions to this course in the form of corrections, additional resources, and improvements are highly welcome! If you encounter any issues with the course materials or have suggestions for enhancements, please feel free to open an issue in this repository.
