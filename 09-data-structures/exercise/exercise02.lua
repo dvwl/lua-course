@@ -1,0 +1,11 @@
+-- Write a Lua program that reverses a singly linked list using tables. Create a function called reverseLinkedList that takes the head of the linked list as an argument and returns the head of the reversed list. Each node in the linked list is represented as a table with a value and a next field.
+
+-- Example output
+-- Original List:
+-- 1
+-- 2
+-- 3
+-- Reversed List:
+-- 3
+-- 2
+-- 1
