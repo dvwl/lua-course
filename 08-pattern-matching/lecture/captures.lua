@@ -31,7 +31,7 @@ print(string.match(s, p)) --> = [[ something ]] ]==]
 
 -- The first capture is the sequence of equals signs (only one sign in this example); the second is the string content.
 
--- The third use of captured values is in the replacement string of gsub. Like the pattern, the replacement string can also contain items like "%n", which are changed to the respective captures when the substitution is made. In particular, the item "%0" becomes the whole match. (By the way, a percent sign in thereplacement string must be escaped as "%%".) As an example, the following command duplicates every letter in a string, with a hyphen between the copies:
+-- The third use of captured values is in the replacement string of gsub. Like the pattern, the replacement string can also contain items like "%n", which are changed to the respective captures when the substitution is made. In particular, the item "%0" becomes the whole match. (By the way, a percent sign in the replacement string must be escaped as "%%".) As an example, the following command duplicates every letter in a string, with a hyphen between the copies:
 print((string.gsub("hello Lua!", "%a", "%0-%0"))) --> h-he-el-ll-lo-o L-Lu-ua-a!
 
 -- This one interchanges adjacent characters:

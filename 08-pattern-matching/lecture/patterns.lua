@@ -79,11 +79,11 @@ if string.find(s, "^[+-]?%d+$") then
 	-- do something with it
 end
 
--- The caret and dollar signs are magic only when used in the beginning or end of the pattern. Otherwise, they act as regular characters matching themselves.
+-- The caret  and dollar signs are magic only when used in the beginning or end of the pattern. Otherwise, they act as regular characters matching themselves.
 
 -- Another item in a pattern is '%b', which matches balanced strings. We write this item as '%bxy', where x and y are any two distinct characters; the x acts as an opening character and the y as the closing one. For instance, the pattern '%b()' matches parts of the string that start with a left parenthesis and finish at the respective right one:
 s = "a (enclosed (in) parentheses) line"
-print((string.gsub(s, "%b()", ""))) --> a line
+print((string.gsub(s, "%b()", ""))) --> a  line
 
 -- Typically, we use this pattern as '%b()', '%b[]', '%b{}', or '%b<>', but we can use any two distinct characters as delimiters.
 
