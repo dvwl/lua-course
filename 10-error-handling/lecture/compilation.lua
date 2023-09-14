@@ -60,7 +60,7 @@ end
 -- We can call load also with a reader function as its first argument. A reader function can return the chunk in parts; load calls the reader successively until it returns nil, which signals the chunk's end. As an example, the next call is equivalent to loadfile:
 f = load(io.lines(filename, "*L"))
 
--- As we saw in Chapter 7, The External World, the call io.lines(filename, "*L") returns a function that, at each call, returns a new line from the given file. So, load will read the chunk from the file line by line. The following version is similar, but slightly more efficient:
+-- As we saw in Section 6, The External World, the call io.lines(filename, "*L") returns a function that, at each call, returns a new line from the given file. So, load will read the chunk from the file line by line. The following version is similar, but slightly more efficient:
 f = load(io.lines(filename, 1024))
 
 -- Here, the iterator returned by io.lines reads the file in blocks of 1024 bytes.
