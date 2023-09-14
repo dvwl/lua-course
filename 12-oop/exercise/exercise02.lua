@@ -1,0 +1,3 @@
+-- Implement classes for two geometric shapes: Circle and Rectangle. Each shape class should have methods to calculate its area and perimeter.
+-- Implement using dual representation.
+-- You'll need to decide which parameters / attributes / keys should be private.
