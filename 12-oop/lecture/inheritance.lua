@@ -16,7 +16,7 @@ function Account:deposit (v)
 end
 
 function Account:withdraw (v)
-	if v > self.balance then error"insufficient funds" end
+	if v > self.balance then error "insufficient funds" end
 	self.balance = self.balance - v
 end
 
@@ -31,7 +31,7 @@ s = SpecialAccount:new{limit=1000.00}
 -- What makes a SpecialAccount special is that we can redefine any method inherited from its superclass. All we have to do is to write the new method:
 function SpecialAccount:withdraw (v)
 	if v - self.balance >= self:getLimit() then
-		error"insufficient funds"
+		error "insufficient funds"
 	end
 	self.balance = self.balance - v
 end

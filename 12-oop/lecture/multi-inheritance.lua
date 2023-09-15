@@ -1,5 +1,5 @@
 --[[ Multiple Inheritance ]]
--- Because objects are not primitive in Lua, there are several ways to do object-oriented programming in Lua. The approach that we have seen, using the index metamethod, is probably the best combination of simplicity, performance, and flexibility. Nevertheless, there are other implementations, which may be more appropriate for some particular cases. Here we will see an alternative implementation that allows multiple inheritance in Lua.
+-- Because objects are not primitive in Lua, there are several ways to do object-oriented programming in Lua. The approach that we have seen, using the __index metamethod, is probably the best combination of simplicity, performance, and flexibility. Nevertheless, there are other implementations, which may be more appropriate for some particular cases. Here we will see an alternative implementation that allows multiple inheritance in Lua.
 
 -- The key to this implementation is the use of a function for the metafield __index. Remember that, when a table's metatable has a function in the __index field, Lua will call this function whenever it cannot find a key in the original table. Then, __index can look up for the missing key in how many parents it wants.
 
