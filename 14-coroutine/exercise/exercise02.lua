@@ -1,0 +1,1 @@
+-- Write a Lua program that generates Fibonacci numbers using coroutines. Create a coroutine that produces Fibonacci numbers one by one, and another coroutine that prints the first 10 Fibonacci numbers.
