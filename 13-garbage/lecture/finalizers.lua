@@ -7,7 +7,7 @@ setmetatable(o, {__gc = function (o) print(o.x) end})
 o = nil
 collectgarbage() --> hi
 
--- In this example, we first create a table and give it a metatable that has a __gc metamethod. Then we erase the only link to the table (the global variable o) and force a complete garbage collection. During the collection, Lua detects that the table is no longer accessible, and therefore calls its finalizer —the __gc metamethod.
+-- In this example, we first create a table and give it a metatable that has a __gc metamethod. Then we erase the only link to the table (the global variable o) and force a complete garbage collection. During the collection, Lua detects that the table is no longer accessible, and therefore calls its finalizer — the __gc metamethod.
 
 -- A subtlety of finalizers in Lua is the concept of marking an object for finalization. We mark an object for finalization by setting a metatable for it with a non-null __gc metamethod. If we do not mark the object, it will not be finalized. Most code we write works naturally, but some strange cases can occur, like here:
 o = {x = "hi"}

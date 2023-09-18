@@ -1,5 +1,5 @@
 --[[ Memorize Functions ]]
--- A common programming technique is to trade space for time. We can speed up a function by memorizing its results so that, later, when we call the function with the same argument, the function can reuse that result.1
+-- A common programming technique is to trade space for time. We can speed up a function by memorizing its results so that, later, when we call the function with the same argument, the function can reuse that result. 
 
 -- Imagine a generic server that takes requests in the form of strings with Lua code. Each time it gets a request, it runs load on the string, and then calls the resulting function. However, load is an expensive function, and some commands to the server may be quite frequent. Instead of calling load repeatedly each time it receives a common command like "closeconnection()", the server can memorize the results from load using an auxiliary table. Before calling load, the server checks in the table whether the given string already has a translation. If it cannot find a match, then (and only then) the server calls load and stores the result into the table. We can pack this behavior in a new function:
 local results = {}
