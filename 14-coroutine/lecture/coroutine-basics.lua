@@ -52,7 +52,7 @@ end)
 coroutine.resume(co, 1, 2, 3) --> co 1 2 5
 -- A call to coroutine.resume returns, after the true that signals no errors, any arguments passed to the corresponding yield:
 co = coroutine.create(function (a,b)
-coroutine.yield(a + b, a - b)
+	coroutine.yield(a + b, a - b)
 end)
 print(coroutine.resume(co, 20, 10)) --> true 30 10
 

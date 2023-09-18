@@ -52,25 +52,25 @@ function permgen (a, n)
 	end
 end
 
-Then, we define a factory that arranges for the generator to run inside a coroutine and creates the iterator
-function. The iterator simply resumes the coroutine to produce the next permutation:
- function permutations (a)
- local co = coroutine.create(function () permgen(a) end)
- return function () -- iterator
- local code, res = coroutine.resume(co)
- return res
- end
- end
-With this machinery in place, it is trivial to iterate over all permutations of an array with a for statement:
- for p in permutations{"a", "b", "c"} do
- printResult(p)
- end
- --> b c a
- --> c b a
- --> c a b
- --> a c b
- --> b a c
- --> a b c
+-- Then, we define a factory that arranges for the generator to run inside a coroutine and creates the iterator function. The iterator simply resumes the coroutine to produce the next permutation:
+function permutations (a)
+	local co = coroutine.create(function () permgen(a) end)
+	return function () -- iterator
+		local code, res = coroutine.resume(co)
+		return res
+	end
+end
+
+-- With this machinery in place, it is trivial to iterate over all permutations of an array with a for statement:
+for p in permutations{"a", "b", "c"} do
+	printResult(p)
+end
+--> b c a
+--> c b a
+--> c a b
+--> a c b
+--> b a c
+--> a b c
 
 -- The function permutations uses a common pattern in Lua, which packs a call to resume with its corresponding coroutine inside a function. This pattern is so common that Lua provides a special function for it: coroutine.wrap. Like create, wrap creates a new coroutine. Unlike create, wrap does not return the coroutine itself; instead, it returns a function that, when called, resumes the coroutine. Unlike the original resume, that function does not return an error code as its first result; instead, it raises the error in case of error. Using wrap, we can write permutations as follows:
 function permutations (a)
