@@ -1,0 +1,2 @@
+-- All coders will at times research how other people have made something. However, the code you find online might not do exactly what you want or be formatted in a way that makes it easy for your team members to read. It’s important that you take the time to examine borrowed code and make improvements where you can. In this exercise, practice by taking an anonymous function and trying to reformat it as a named function:
+script.Parent.Touched:Connect(function(otherPart) local fire = Instance.new"Fire" fire.Parent = otherPart end)
