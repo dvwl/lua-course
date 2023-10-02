@@ -1,0 +1,1 @@
+-- People can be teleported from place to place within a world by updating their character’s CFrame information. This might be so that players can cross a canyon or it could be teleporting participants from a lobby to an arena. For this exercise, create a part that teleports players to another part.
