@@ -1,0 +1,21 @@
+-- This section talks about setting up game loops
+-- We'll explore BindableEvents (not the same as RemoteEvents)
+
+-- Setting up the demo
+-- 1. Create the two areas you want to use for your world
+-- 2. Seperate all the elements for the two areas into unique folders
+		-- Workspace
+			-- Lobby
+				-- Environment
+					-- Island
+				-- StartSpawn
+			-- Arena
+				-- Environment
+					-- Island
+				-- SpawnLocation
+-- 3. Within ServerStorage, add folder Events and create the BindableEvents.
+		-- ServerStorage
+			-- Events
+				-- RoundStart
+				-- RoundEnd
+-- 4. Use the scripts in this folder in their respective locations.
