@@ -1,0 +1,2 @@
+-- Explore the exercises at
+-- https://microsoftlearning.github.io/mslearn-generative-ai/Instructions/Labs/1-use-generative-ai.html
