@@ -1,4 +1,4 @@
--- Game by: Nur Ain Nadirah Kasuma Wangi
+-- Game by: Nur Ain Nadirah Kasuma Wangi and Anisah Bahiyah Binti Mazlan
 
 -- Define a coroutine for the player's adventure
 local adventureCoroutine
